@@ -7,8 +7,7 @@ import httpx
 from nicegui import ui
 from app.state import app_state, is_logged_in, logout
 
-import os
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+BACKEND_URL = "http://localhost:8000"
 
 STATUS_COLORS = {
     "active":    "#277dff",
