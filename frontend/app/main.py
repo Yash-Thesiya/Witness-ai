@@ -1,3 +1,4 @@
+import os
 from nicegui import ui
 
 from app.pages.login import login_page
@@ -45,7 +46,7 @@ def calendar():
 
 ui.run(
     host="0.0.0.0",
-    port=8080,
+    port=int(os.environ.get("PORT",8080))
     title="Witness",
     favicon="👁",
     dark=False,
