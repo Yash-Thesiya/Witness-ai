@@ -1,7 +1,7 @@
 import os
 import httpx
 
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+BACKEND_URL = "http://localhost:8000"
 
 
 def login(email: str, password: str) -> dict:
