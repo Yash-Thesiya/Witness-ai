@@ -4,7 +4,8 @@ All requests go through here.
 """
 import httpx
 
-BACKEND_URL = "http://backend:8000"
+import os
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
 
 def login(email: str, password: str) -> dict:
