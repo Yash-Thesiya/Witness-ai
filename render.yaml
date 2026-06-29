@@ -105,4 +105,3 @@ databases:
 # ── Redis ────────────────────────────────────────
   - name: witness-redis
     plan: free
-    type: redis
