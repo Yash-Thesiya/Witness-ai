@@ -8,6 +8,8 @@ passlib[bcrypt]
 python-multipart
 httpx
 pydantic-settings
+pydantic[email]
+email-validator
 celery
 redis
 openai
