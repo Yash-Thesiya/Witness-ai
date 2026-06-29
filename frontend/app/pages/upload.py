@@ -9,7 +9,7 @@ from app.state import app_state, is_logged_in, logout
 from app.theme import get_base_css, get_sidebar_html, PRIMARY, PRIMARY_LIGHT, PRIMARY_HOVER, PAGE_BG, CARD_BG, CARD_BG_SOFT, CARD_BORDER, TEXT_PRIMARY, TEXT_SECONDARY, TEXT_MUTED
 
 import os
-BACKEND_URL = os.getenv("BACKEND_URL", ""https://witness-ai.onrender.com"")
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
 
 def upload_page():
@@ -251,7 +251,7 @@ def upload_page():
 
 <script>
 var TOKEN = "{token}";
-var API = "http://localhost:8000";
+var API = "https://witness-ai.onrender.com";
 
 function dOver(e, id) {{
     e.preventDefault();
