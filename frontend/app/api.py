@@ -1,8 +1,7 @@
 import os
 import httpx
 
-BACKEND_URL = "http://localhost:8000"
-
+BACKEND_URL = os.environ.get("API_URL", "http://localhost:8000")
 
 def login(email: str, password: str) -> dict:
     try:
