@@ -49,5 +49,5 @@ ui.run(
     title="Witness",
     favicon="👁",
     dark=False,
-    reload=True,
+    reload=False,
 )
