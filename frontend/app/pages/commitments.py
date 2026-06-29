@@ -12,7 +12,8 @@ from app.theme import (
     STATUS, STATUS_ICONS, AVATAR_COLORS,
 )
 
-BACKEND_URL = "http://backend:8000"
+import os
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
 
 def get_commitments(token, status=None, owner=None, search=None):
