@@ -1,3 +1,5 @@
+import os
+import subprocess
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
@@ -23,19 +25,15 @@ app.include_router(commitments.router)
 
 @app.on_event("startup")
 def run_migrations():
-    """Auto-run migrations on startup."""
     try:
-        import subprocess
         result = subprocess.run(
             ["alembic", "upgrade", "head"],
             capture_output=True,
             text=True,
         )
-        print("[Migrations] Output:", result.stdout)
+        print("[Migrations]", result.stdout)
         if result.returncode != 0:
             print("[Migrations] Error:", result.stderr)
-        else:
-            print("[Migrations] Done!")
     except Exception as e:
         print(f"[Migrations] Failed: {e}")
 
