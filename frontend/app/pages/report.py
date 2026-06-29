@@ -12,8 +12,7 @@ from app.theme import (
     AVATAR_COLORS,
 )
 
-import os
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+BACKEND_URL = "http://localhost:8000"
 
 
 def get_report(token: str) -> dict:
