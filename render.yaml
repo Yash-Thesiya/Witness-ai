@@ -3,8 +3,8 @@ services:
   - type: web
     name: witness-backend
     runtime: docker
-    dockerfilePath: ./backend/Dockerfile
-    dockerContext: ./backend
+    dockerfilePath: .\backend\Dockerfile
+    dockerContext: .\backend
     envVars:
       - key: DATABASE_URL
         fromDatabase:
