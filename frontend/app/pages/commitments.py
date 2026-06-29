@@ -13,7 +13,7 @@ from app.theme import (
 )
 
 import os
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+BACKEND_URL = os.getenv("BACKEND_URL", ""https://witness-ai.onrender.com"")
 
 
 def get_commitments(token, status=None, owner=None, search=None):
