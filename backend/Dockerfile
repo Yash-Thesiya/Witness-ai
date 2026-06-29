@@ -2,7 +2,6 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# ffmpeg is required by Whisper for audio processing
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc libpq-dev ffmpeg \
     && rm -rf /var/lib/apt/lists/*
@@ -14,4 +13,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
