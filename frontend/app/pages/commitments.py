@@ -13,7 +13,7 @@ from app.theme import (
 )
 
 import os
-BACKEND_URL = os.getenv("BACKEND_URL", ""https://witness-ai.onrender.com"")
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
 
 def get_commitments(token, status=None, owner=None, search=None):
@@ -556,7 +556,7 @@ def commitment_detail_page(commitment_id: int):
 <script>
 var CID = {commitment_id};
 var TOKEN = "{app_state['token']}";
-var API = "http://localhost:8000";
+var API = "https://witness-ai.onrender.com";
 
 function updateStatus(ns) {{
     var note = document.getElementById('note-input').value;
