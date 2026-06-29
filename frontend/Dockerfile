@@ -7,8 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENV PYTHONPATH=/app
-
 EXPOSE 8080
 
 CMD ["python", "app/main.py"]
