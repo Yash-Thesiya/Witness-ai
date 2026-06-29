@@ -13,7 +13,8 @@ from app.theme import (
     SIDEBAR_BG, STATUS, STATUS_ICONS, AVATAR_COLORS,
 )
 
-BACKEND_URL = "http://backend:8000"
+import os
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
 
 def get_dashboard_data(token: str) -> dict:
